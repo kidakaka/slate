@@ -23,6 +23,8 @@ Welcome to the lending API for Singularity! You can use our API to automate your
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
+For getting developer keys for UAT and Production environments, please drop an email to prasad@singularitycredit.com.
+
 
 # Authentication
 
@@ -64,34 +66,84 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Personal Loan
 
-## Get All Kittens
+## Dedupe Check
 
 ```ruby
-require 'kittn'
+require 'uri'
+require 'net/http'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = '0ae2699a-c937-1b1e-2fbf-84dd7134acff'
+request.body = "{\n  \"mobile\": \"9823394322\",\n  \"email\": \"sachit@homecapital.in\",\n  \"pan\": \"DYYPK7129D\"\n}"
+
+response = http.request(request)
+puts response.read_body
 ```
 
 ```python
-import kittn
+import http.client
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+conn = http.client.HTTPConnection("")
+
+payload = "{\n  \"mobile\": \"9823394322\",\n  \"email\": \"sachit@homecapital.in\",\n  \"pan\": \"DYYPK7129D\"\n}"
+
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "c43a8082-2abe-84ff-d1cc-5a10a63080fa"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/dedupe", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 53a1b458-824f-7550-75ff-7c1679dba8a7' \
+  -d '{
+  "mobile": "9823394322",
+  "email": "sachit@homecapital.in",
+  "pan": "DYYPK7129D"
+}'
 ```
 
 ```javascript
-const kittn = require('kittn');
+var data = JSON.stringify({
+  "mobile": "9823394322",
+  "email": "sachit@homecapital.in",
+  "pan": "DYYPK7129D"
+});
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "335413ee-d571-4230-9fec-7706c7f08502");
+
+xhr.send(data);
 ```
 
 > The above command returns JSON structured like this:
@@ -115,49 +167,100 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint checks against the details provided if the person is already a customer of Singularity or not. If the person is not a customer of Singularity, then the dedupe API will indicate as much. If this happens, then you want to call the Register Applicant API.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET {{Req_URL}}/api/v1/dedupe`
 
 ### Query Parameters
 
-Parameter | Default | Description
+Parameter | Format | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+mobile | 9999999999 | 10 digit mobile number, without spaces and ISD code
+email | email.address@domain.com | Email address of the person who wants the personal loan
+pan | AAAAA9999A | PAN of the person who wants the personal loan
 
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+## Register Applicant
 
 ```ruby
-require 'kittn'
+require 'uri'
+require 'net/http'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = '0ae2699a-c937-1b1e-2fbf-84dd7134acff'
+request.body = "{\n  \"mobile\": \"9823394322\",\n  \"email\": \"sachit@homecapital.in\",\n  \"pan\": \"DYYPK7129D\"\n}"
+
+response = http.request(request)
+puts response.read_body
 ```
 
 ```python
-import kittn
+import http.client
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+conn = http.client.HTTPConnection("")
+
+payload = "{\n  \"mobile\": \"9823394322\",\n  \"email\": \"sachit@homecapital.in\",\n  \"pan\": \"DYYPK7129D\"\n}"
+
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "c43a8082-2abe-84ff-d1cc-5a10a63080fa"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/dedupe", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 53a1b458-824f-7550-75ff-7c1679dba8a7' \
+  -d '{
+  "mobile": "9823394322",
+  "email": "sachit@homecapital.in",
+  "pan": "DYYPK7129D"
+}'
 ```
 
 ```javascript
-const kittn = require('kittn');
+var data = JSON.stringify({
+  "mobile": "9823394322",
+  "email": "sachit@homecapital.in",
+  "pan": "DYYPK7129D"
+});
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/dedupe");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "335413ee-d571-4230-9fec-7706c7f08502");
+
+xhr.send(data);
 ```
 
 > The above command returns JSON structured like this:
