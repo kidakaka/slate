@@ -199,7 +199,7 @@ request = Net::HTTP::Post.new(url)
 request["content-type"] = 'application/json'
 request["cache-control"] = 'no-cache'
 request["postman-token"] = '81336b1f-98b3-87f5-a530-4b29cecc9f05'
-request.body = " {\n            \"first_name\" : \"URMILA\",\n            \"middle_name\" : \"HARSHAD\",\n            \"last_name\" : \"ODHEKAR\",\n            \"mobile\": \"9619927914\",\n            \"email\" : \"urmial.odhekar@gmail.com\",\n            \"pan\" : \"AROPB9302K\",\n            \"aadhar_number\" : \"XXXXXXXX6070\",\n            \"dob\" : \"02/25/1984\",\n            \"gender\" : \"female\",\n            \"marital_status\" : \"married\",\n            \"qualification\" : 200,\n            \"citizenship\" : \"indian\",\n            \"ca_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"ca_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"ca_city\" : 20005,\n            \"ca_state\" : 19771,\n            \"ca_pincode\" : 400068,\n            \"ca_residence_duration\" : 300,\n            \"ca_residence_type\" : \"with parents\",\n            \"pa_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"pa_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"pa_city\" : 20005,\n            \"pa_state\" : 19771,\n            \"pa_pincode\" : 400068,\n            \"pa_residence_duration\" : 300,\n            \"pa_residence_type\" : \"with parents\",\n            \"different_address\" : 0,\n            \"pp_current_job_months\" : 0,\n            \"pp_current_job_years\" : 1,\n            \"pp_total_experience_months\" : 0,\n            \"pp_total_experience_years\" : 1,\n            \"pp_industry\" : 86,\n            \"pp_employment_type\" : \"salaried\",\n            \"pp_company_name\" : \"MUNICIPAL CORPORATION OF GREATER MUMBAI\",\n            \"pp_net_income\" :  59410,\n            \"pp_current_emis\" : 0,\n            \"pp_other_income\":0,\n            \"pp_office_email\" : \"urmial.odhekar@gmail.com\",\n            \"pp_designation\" : \"N/A\",\n            \"pp_constitution\" : \"gov\",\n            \"pp_org_address_line1\" : \"5, Mahapalika Marg, Dhobi Talao\",\n            \"pp_org_address_line2\" : \"Chhatrapati Shivaji Terminus Area,Fort\",\n            \"pp_city\" : 20005,\n            \"pp_state\" : 19771,\n            \"pp_pincode\" : 400001\n        }"
+request.body = " {\n            \"first_name\" : \"URMILA\",\n            \"middle_name\" : \"HARSHAD\",\n            \"last_name\" : \"ODHEKAR\",\n            \"mobile\": \"9619927914\",\n            \"email\" : \"urmial.odhekar@gmail.com\",\n            \"pan\" : \"AROPB9302K\",\n            \"aadhar_number\" : \"XXXXXXXX6070\",\n            \"dob\" : \"02/25/1984\",\n            \"gender\" : \"female\",\n            \"marital_status\" : \"married\",\n            \"qualification\" : 200,\n            \"citizenship\" : \"indian\",\n            \"ca_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"ca_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"ca_city\" : 20005,\n            \"ca_state\" : 19771,\n            \"ca_pincode\" : 400068,\n            \"ca_residence_duration\" : 300,\n            \"ca_residence_type\" : \"with parents\",\n            \"pa_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"pa_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"pa_city\" : 20005,\n            \"pa_state\" : 19771,\n            \"pa_pincode\" : 400068,\n            \"pa_residence_duration\" : 300,\n            \"pa_residence_type\" : \"with parents\",\n              \"pp_current_job_months\" : 0,\n            \"pp_current_job_years\" : 1,\n            \"pp_total_experience_months\" : 0,\n            \"pp_total_experience_years\" : 1,\n            \"pp_industry\" : 86,\n            \"pp_employment_type\" : \"salaried\",\n            \"pp_company_name\" : \"MUNICIPAL CORPORATION OF GREATER MUMBAI\",\n            \"pp_net_income\" :  59410,\n            \"pp_current_emis\" : 0,\n            \"pp_other_income\":0,\n            \"pp_office_email\" : \"urmial.odhekar@gmail.com\",\n            \"pp_designation\" : \"N/A\",\n            \"pp_constitution\" : \"gov\",\n            \"pp_org_address_line1\" : \"5, Mahapalika Marg, Dhobi Talao\",\n            \"pp_org_address_line2\" : \"Chhatrapati Shivaji Terminus Area,Fort\",\n            \"pp_city\" : 20005,\n            \"pp_state\" : 19771,\n            \"pp_pincode\" : 400001\n        }"
 
 response = http.request(request)
 puts response.read_body
@@ -210,7 +210,7 @@ import http.client
 
 conn = http.client.HTTPConnection("")
 
-payload = " {\n            \"first_name\" : \"URMILA\",\n            \"middle_name\" : \"HARSHAD\",\n            \"last_name\" : \"ODHEKAR\",\n            \"mobile\": \"9619927914\",\n            \"email\" : \"urmial.odhekar@gmail.com\",\n            \"pan\" : \"AROPB9302K\",\n            \"aadhar_number\" : \"XXXXXXXX6070\",\n            \"dob\" : \"02/25/1984\",\n            \"gender\" : \"female\",\n            \"marital_status\" : \"married\",\n            \"qualification\" : 200,\n            \"citizenship\" : \"indian\",\n            \"ca_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"ca_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"ca_city\" : 20005,\n            \"ca_state\" : 19771,\n            \"ca_pincode\" : 400068,\n            \"ca_residence_duration\" : 300,\n            \"ca_residence_type\" : \"with parents\",\n            \"pa_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"pa_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"pa_city\" : 20005,\n            \"pa_state\" : 19771,\n            \"pa_pincode\" : 400068,\n            \"pa_residence_duration\" : 300,\n            \"pa_residence_type\" : \"with parents\",\n            \"different_address\" : 0,\n            \"pp_current_job_months\" : 0,\n            \"pp_current_job_years\" : 1,\n            \"pp_total_experience_months\" : 0,\n            \"pp_total_experience_years\" : 1,\n            \"pp_industry\" : 86,\n            \"pp_employment_type\" : \"salaried\",\n            \"pp_company_name\" : \"MUNICIPAL CORPORATION OF GREATER MUMBAI\",\n            \"pp_net_income\" :  59410,\n            \"pp_current_emis\" : 0,\n            \"pp_other_income\":0,\n            \"pp_office_email\" : \"urmial.odhekar@gmail.com\",\n            \"pp_designation\" : \"N/A\",\n            \"pp_constitution\" : \"gov\",\n            \"pp_org_address_line1\" : \"5, Mahapalika Marg, Dhobi Talao\",\n            \"pp_org_address_line2\" : \"Chhatrapati Shivaji Terminus Area,Fort\",\n            \"pp_city\" : 20005,\n            \"pp_state\" : 19771,\n            \"pp_pincode\" : 400001\n        }"
+payload = " {\n            \"first_name\" : \"URMILA\",\n            \"middle_name\" : \"HARSHAD\",\n            \"last_name\" : \"ODHEKAR\",\n            \"mobile\": \"9619927914\",\n            \"email\" : \"urmial.odhekar@gmail.com\",\n            \"pan\" : \"AROPB9302K\",\n            \"aadhar_number\" : \"XXXXXXXX6070\",\n            \"dob\" : \"02/25/1984\",\n            \"gender\" : \"female\",\n            \"marital_status\" : \"married\",\n            \"qualification\" : 200,\n            \"citizenship\" : \"indian\",\n            \"ca_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"ca_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"ca_city\" : 20005,\n            \"ca_state\" : 19771,\n            \"ca_pincode\" : 400068,\n            \"ca_residence_duration\" : 300,\n            \"ca_residence_type\" : \"with parents\",\n            \"pa_line1\" : \"D/401, mandakini chsl, shiv vallabh cross road\",\n            \"pa_line2\" : \"Last bus stop of 298,Rawal pada\",\n            \"pa_city\" : 20005,\n            \"pa_state\" : 19771,\n            \"pa_pincode\" : 400068,\n            \"pa_residence_duration\" : 300,\n            \"pa_residence_type\" : \"with parents\",\n            \"pp_current_job_months\" : 0,\n            \"pp_current_job_years\" : 1,\n            \"pp_total_experience_months\" : 0,\n            \"pp_total_experience_years\" : 1,\n            \"pp_industry\" : 86,\n            \"pp_employment_type\" : \"salaried\",\n            \"pp_company_name\" : \"MUNICIPAL CORPORATION OF GREATER MUMBAI\",\n            \"pp_net_income\" :  59410,\n            \"pp_current_emis\" : 0,\n            \"pp_other_income\":0,\n            \"pp_office_email\" : \"urmial.odhekar@gmail.com\",\n            \"pp_designation\" : \"N/A\",\n            \"pp_constitution\" : \"gov\",\n            \"pp_org_address_line1\" : \"5, Mahapalika Marg, Dhobi Talao\",\n            \"pp_org_address_line2\" : \"Chhatrapati Shivaji Terminus Area,Fort\",\n            \"pp_city\" : 20005,\n            \"pp_state\" : 19771,\n            \"pp_pincode\" : 400001\n        }"
 
 headers = {
     'content-type': "application/json",
@@ -259,7 +259,6 @@ curl -X POST \
             "pa_pincode" : 400068,
             "pa_residence_duration" : 300,
             "pa_residence_type" : "with parents",
-            "different_address" : 0,
             "pp_current_job_months" : 0,
             "pp_current_job_years" : 1,
             "pp_total_experience_months" : 0,
@@ -309,7 +308,6 @@ var data = JSON.stringify({
   "pa_pincode": 400068,
   "pa_residence_duration": 300,
   "pa_residence_type": "with parents",
-  "different_address": 0,
   "pp_current_job_months": 0,
   "pp_current_job_years": 1,
   "pp_total_experience_months": 0,
@@ -409,40 +407,86 @@ pp_current_emis | No | Current EMIs of the applicant (if any)
 pp_other_income | No | Other income of the applicant (if any)
 pp_office_email | No | Professional email address of the applicant (this will be verified)
 pp_designation | No | Designation of the applicant
-pp_constitution | Yes | Designation of the applicant
+pp_constitution | Yes | Constituon of the organization of the applicant (proprietorship/pvt ltd/gov sector)
 pp_org_address_line1 | Yes | Address Line 1 of Company office
 pa_line2 | No | Address Line 2  of Company office
 pa_city | Yes | City id of the applicant (see Master collection for the mapping) 
 pa_state | Yes | State id of the applicant (see Master collection for the mapping) 
 pa_pincode | Yes | Pincode of the applicant's Company office
 
-## Delete a Specific Kitten
+## Upload a document
 
 ```ruby
-require 'kittn'
+require 'uri'
+require 'net/http'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/upload-document")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["accept"] = 'application/json'
+request["content-type"] = 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
+request["authorization"] = 'Bearer  {{Token}}'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = 'b29e9516-226b-f0ac-a576-fffba1002b7e'
+
+response = http.request(request)
+puts response.read_body
 ```
 
 ```python
-import kittn
+import http.client
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
+conn = http.client.HTTPConnection("")
+
+payload = ""
+
+headers = {
+    'accept': "application/json",
+    'content-type': "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+    'authorization': "Bearer  {{Token}}",
+    'cache-control': "no-cache",
+    'postman-token': "df6ed9ed-381d-e57c-c9d5-bd38f56a7cbf"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/upload-document", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/upload-document \
+  -H 'accept: application/json' \
+  -H 'authorization: Bearer  {{Token}}' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'postman-token: 1c35b31d-61a9-70ac-8de2-7c8977b006bc'
 ```
 
 ```javascript
-const kittn = require('kittn');
+var data = new FormData();
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/upload-document");
+xhr.setRequestHeader("accept", "application/json");
+xhr.setRequestHeader("authorization", "Bearer  {{Token}}");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "e8a64c32-1c90-affb-611a-464dc99b31be");
+
+xhr.send(data);
 ```
 
 > The above command returns JSON structured like this:
@@ -454,15 +498,129 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This API is used to upload different documents to the lending API. In case if the document is a bank statement, then additional parameters are to be used. These are marked as optional for all other document types.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`POST {{Req_URL}}/api/v1/upload-document`
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
+Parameter | Required | Description
+--------- | ------- | -----------
+applicant_id | Yes | ID of the applicant. If you do not have this, first see the Register Applicant call.
+document_type | Yes | Document type enumeration ('pancard'/'front_aadhar'/'back_aadhar'/'rent_agreement'/'electricity_bill'/ 'electricity_bill_senp'/'photograph'/'salary_slip'/'bank_statement_doc'/'form_16')
+document | Yes | File stream
+bankId | Optional | ID of the bank if the document is a bank statement (see Master collection for the mapping) 
 
+## Create Loan Application
+
+```ruby
+require 'uri'
+require 'net/http'
+
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/application")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = '60f67bf9-7f93-f051-4d1c-a822a3e6bcb4'
+request.body = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+
+```python
+import http.client
+
+conn = http.client.HTTPConnection("")
+
+payload = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "2509ff8c-bd6a-eef3-9692-93c6dd2c8d25"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/application", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```shell
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/application \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: e2b85924-cff1-4315-ced5-d070f96b15a9' \
+  -d '{
+            "applicant_id" : 12,
+            "co_applicant_id" : 13,
+            "bank_id" : 10,
+            "tenure_months" : 12,
+            "loan_amount" : 1200000,
+            "loan_product_id" : 2,
+            "external_id":""
+}'
+```
+
+```javascript
+var data = JSON.stringify({
+  "applicant_id": 12,
+  "co_applicant_id": 13,
+  "bank_id": 10,
+  "tenure_months": 12,
+  "loan_amount": 1200000,
+  "loan_product_id": 2,
+  "external_id": ""
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/application");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "c766ffaf-e8e4-0930-e721-99b9853e4057");
+
+xhr.send(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
+This API is used to create a loan application. All loan applications will be active for 2 months after they are pushed. If a loan application is not approved in 2 months, it will be automatically updated as a rejected loan application.
+
+### HTTP Request
+
+`POST {{Req_URL}}/api/v1/application`
+
+### URL Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+applicant_id | Yes | ID of the applicant. If you do not have this, first see the Register Applicant call.
+co_applicant_id | No | ID of the co-applicant. If you do not have this, first see the Register Applicant call.
+tenure_months | Yes | Tenure of the loan application
+loan_amount | Yes | Loan amount
+loan_product_id | Yes | This is 2 for a Personal Loan
+external_id | No | If the sourcing partner ID is to be mapped to the application ID, this can be shared
