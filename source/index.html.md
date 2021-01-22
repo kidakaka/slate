@@ -66,6 +66,217 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
+# Master APIs
+
+## City Master
+
+
+```ruby
+require 'uri'
+require 'net/http'
+
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/organizations")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = '60f67bf9-7f93-f051-4d1c-a822a3e6bcb4'
+request.body = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+
+```python
+import http.client
+
+conn = http.client.HTTPConnection("")
+
+payload = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "2509ff8c-bd6a-eef3-9692-93c6dd2c8d25"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/application", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```shell
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/application \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: e2b85924-cff1-4315-ced5-d070f96b15a9' \
+  -d '{
+            "applicant_id" : 12,
+            "co_applicant_id" : 13,
+            "bank_id" : 10,
+            "tenure_months" : 12,
+            "loan_amount" : 1200000,
+            "loan_product_id" : 2,
+            "external_id":""
+}'
+```
+
+```javascript
+var data = JSON.stringify({
+  "applicant_id": 12,
+  "co_applicant_id": 13,
+  "bank_id": 10,
+  "tenure_months": 12,
+  "loan_amount": 1200000,
+  "loan_product_id": 2,
+  "external_id": ""
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/application");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "c766ffaf-e8e4-0930-e721-99b9853e4057");
+
+xhr.send(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
+Fetches all cities in the system. Map this against the locations in your system
+
+### HTTP Request
+
+`GET {{Req_URL}}/api/v1/cities`
+
+## State Master
+
+
+```ruby
+require 'uri'
+require 'net/http'
+
+url = URI("http:///%7B%7BReq_URL%7D%7D/api/v1/organizations")
+
+http = Net::HTTP.new(url.host, url.port)
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["cache-control"] = 'no-cache'
+request["postman-token"] = '60f67bf9-7f93-f051-4d1c-a822a3e6bcb4'
+request.body = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+
+```python
+import http.client
+
+conn = http.client.HTTPConnection("")
+
+payload = "{\n            \"applicant_id\" : 12,\n            \"co_applicant_id\" : 13,\n            \"bank_id\" : 10,\n            \"tenure_months\" : 12,\n            \"loan_amount\" : 1200000,\n            \"loan_product_id\" : 2,\n            \"external_id\":\"\"\n}"
+
+headers = {
+    'content-type': "application/json",
+    'cache-control': "no-cache",
+    'postman-token': "2509ff8c-bd6a-eef3-9692-93c6dd2c8d25"
+    }
+
+conn.request("POST", "%7B%7BReq_URL%7D%7D/api/v1/application", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+```shell
+curl -X POST \
+  http:///%7B%7BReq_URL%7D%7D/api/v1/application \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: e2b85924-cff1-4315-ced5-d070f96b15a9' \
+  -d '{
+            "applicant_id" : 12,
+            "co_applicant_id" : 13,
+            "bank_id" : 10,
+            "tenure_months" : 12,
+            "loan_amount" : 1200000,
+            "loan_product_id" : 2,
+            "external_id":""
+}'
+```
+
+```javascript
+var data = JSON.stringify({
+  "applicant_id": 12,
+  "co_applicant_id": 13,
+  "bank_id": 10,
+  "tenure_months": 12,
+  "loan_amount": 1200000,
+  "loan_product_id": 2,
+  "external_id": ""
+});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "http:///%7B%7BReq_URL%7D%7D/api/v1/application");
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "c766ffaf-e8e4-0930-e721-99b9853e4057");
+
+xhr.send(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
+Fetches all states in the system. Map this against the locations in your system
+
+### HTTP Request
+
+`GET {{Req_URL}}/api/v1/states`
+
+## Qualification Master
+
+## Bank Master
+
+
 # Personal Loan
 
 ## Dedupe Check
@@ -180,10 +391,6 @@ Parameter | Required | Description
 mobile | Yes | 10 digit mobile number, without spaces and ISD code
 email | Yes | Email address of the person who wants the personal loan
 pan | Yes | PAN of the person who wants the personal loan
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
 ## Register Applicant
 
